@@ -7,10 +7,14 @@
     </head>
     <body>
         <script type="text/javascript">
-            get_member = function (arg1, arg2) {
-                return arg1 + arg2;
+            get_member = function () {
+                return ['egoing', 'k8805'];
             };
-            alert(get_member(1, 2));
+            member = get_member();
+
+            for (let i = 0; i < member.length; i++) {
+                document.write(member[i].toUpperCase() + '<br />');
+            }
         </script>
     </body>
 </html>
