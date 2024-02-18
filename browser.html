@@ -7,14 +7,15 @@
     </head>
     <body>
         <script type="text/javascript">
-            get_member = function () {
-                return ['egoing', 'k8805'];
+            let grade = {
+                list: { egoing: 10, k8805: 6, sorialgi: 80 },
+                show: function () {
+                    for (let name in this.list) {
+                        document.write(name + ':' + this.list[name] + '<br />');
+                    }
+                },
             };
-            member = get_member();
-
-            for (let i = 0; i < member.length; i++) {
-                document.write(member[i].toUpperCase() + '<br />');
-            }
+            grade.show();
         </script>
     </body>
 </html>
