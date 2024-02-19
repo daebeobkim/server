@@ -3,19 +3,22 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="jquery.js"></script>
         <title>Document</title>
     </head>
     <body>
-        <script type="text/javascript">
-            let grade = {
-                list: { egoing: 10, k8805: 6, sorialgi: 80 },
-                show: function () {
-                    for (let name in this.list) {
-                        document.write(name + ':' + this.list[name] + '<br />');
-                    }
-                },
-            };
-            grade.show();
+        <ul id="list">
+            <li>empty</li>
+            <li>empty</li>
+            <li>empty</li>
+            <li>empty</li>
+        </ul>
+        <input type="button" value="execute" id="execute_btn" />
+        <script>
+            myArray = [1, 2, 3, 4, 5];
+            myArray.forEach((element) => {
+                console.log('나무찍기' + element);
+            });
         </script>
     </body>
 </html>
