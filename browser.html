@@ -15,10 +15,14 @@
         </ul>
         <input type="button" value="execute" id="execute_btn" />
         <script>
-            myArray = [1, 2, 3, 4, 5];
-            myArray.forEach((element) => {
-                console.log('나무찍기' + element);
-            });
+            function first(i) {
+                document.write(1);
+                i();
+            }
+            function second() {
+                document.write(2);
+            }
+            first(second);
         </script>
     </body>
 </html>
