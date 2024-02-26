@@ -8,13 +8,12 @@
     </head>
     <body>
         <script>
-            var person = {
-                name: 'egoing',
-                introduce: function () {
-                    return 'My name is ' + this.name;
-                },
-            };
-            document.write(person.introduce());
+            let arr = new Array('a', 'b', 'c', 'd');
+            function getRandomValueFromArray(arr) {
+                var index = Math.floor(arr.length * Math.random());
+                return arr[index];
+            }
+            console.log(getRandomValueFromArray(arr));
         </script>
     </body>
 </html>
