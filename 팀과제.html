@@ -3,28 +3,52 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Scroll Event</title>
-        <link rel="stylesheet" href="styles.css" />
+        <title>Document</title>
     </head>
     <body>
-        <div class="content">
-            <h1>스크롤 이벤트 테스트</h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus
-                ante dapibus diam. Sed nisi.
-            </p>
-            <p>
-                Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis
-                gravida magna mi a libero. Fusce vulputate eleifend sapien.
-            </p>
-            <p>
-                Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras
-                ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et
-                ultrices posuere cubilia Curae;
-            </p>
-            <!-- 추가로 내용을 넣거나 수정할 수 있습니다. -->
-        </div>
+        <style>
+            body {
+                /*배경*/
+                background: black; /*배경 검은색*/
+                height: 6000px; /*배경 높이 6000px*/
+                font-family: 'NanumSquare'; /*배경 폰트 NanumSquare*/
+            }
+            div {
+                margin-top: 1000px; /*div 위쪽여백 1000px*/
+                color: white; /*div 텍스트 white*/
+                text-align: center; /*div 가운데 정렬*/
+                opacity: 0; /*div 투명도 0*/
+                transform: rotate(-720deg); /*div 회전 -720*/
+                transition: all 0.5s; /*div 변화 0.5초*/
+            }
+        </style>
+        <div><h1>안녕하세요</h1></div>
+        <div><h1>저에요</h1></div>
+        <div><h1>저라구요</h1></div>
+        <div><h1>뭐요</h1></div>
 
-        <script src="script.js"></script>
+        <script>
+            let observer = new IntersectionObserver((e) => {
+                /*IntersectionObserver 객체 생성
+                이 객체는 화면 진입 여부를 감지하고 콜백 함수를 실행*/
+                e.forEach((박스) => {
+                    /* foreach()문을 사용해 각 요소들을 반복 '박스'는 변수 */
+                    if (박스.isIntersecting) {
+                        /*요소가 나타나면*/
+                        박스.target.style.opacity = 1; /* 투명도 1 */
+                        박스.target.style.transform = 'rotate(0deg)'; /* 0도 회전으로 설정*/
+                    } else {
+                        /*요소가 나타나지 않으면*/
+                        박스.target.style.opacity = 0; /* 투명도 0*/
+                    }
+                });
+            });
+
+            let div = document.querySelectorAll('div'); /* html에서 모든 div요소 선택 */
+            observer.observe(div[0]);
+            observer.observe(div[1]);
+            observer.observe(div[2]);
+            observer.observe(div[3]);
+        </script>
     </body>
 </html>
