@@ -6,37 +6,61 @@
         <title>Event Handling Program</title>
         <style>
             #my_div {
-                background: green;
-                height: 100px;
-                width: 100px;
+                background: gainsboro;
+                height: 300px;
+                width: 300px;
+                background-size: cover;
+                transition: transform 0.3s ease-in-out;
             }
         </style>
     </head>
     <body>
         <div id="my_div"></div>
         <input id="clearbtn" type="button" value="clear" />
+        <input id="shakebtn" type="button" value="shake" />
         <div id="result"></div>
 
         <script>
             const div = document.getElementById('my_div');
             const clearbtn = document.getElementById('clearbtn');
+            const shakebtn = document.getElementById('shakebtn');
             const result = document.getElementById('result');
 
-            div.addEventListener('contextmenu', (event) => {
-                result.innerHTML += '<div>contextmenu</div>';
-            });
+            let isClicked = false;
 
             div.addEventListener('mousedown', (event) => {
-                result.innerHTML += '<div>mousedown</div>';
+                result.innerHTML += '<div>뭘</div>';
+                isClicked = true;
+                div.style.backgroundImage =
+                    "url('C:/Users/rlaeo/OneDrive/문서/카카오톡 받은 파일/KakaoTalk_20240331_173934760.jpg')"; // 여기에 로컬 파일 시스템에 있는 이미지 경로를 넣어주세요
             });
 
             div.addEventListener('mouseup', (event) => {
-                result.innerHTML += '<div>mouseup</div>';
+                result.innerHTML += '<div>까요?</div>';
+                isClicked = false;
+                div.style.backgroundImage = 'none';
             });
 
             clearbtn.addEventListener('click', (event) => {
                 result.innerHTML = '';
-                count = 0;
+            });
+
+            shakebtn.addEventListener('click', () => {
+                if (!isClicked) {
+                    div.style.transform = 'rotate(10deg)';
+                    setTimeout(() => {
+                        div.style.transform = 'rotate(-10deg)';
+                        setTimeout(() => {
+                            div.style.transform = 'rotate(5deg)';
+                            setTimeout(() => {
+                                div.style.transform = 'rotate(-5deg)';
+                                setTimeout(() => {
+                                    div.style.transform = 'rotate(0deg)';
+                                }, 100);
+                            }, 100);
+                        }, 100);
+                    }, 100);
+                }
             });
         </script>
     </body>
