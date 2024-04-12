@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>테이블 태그</title>
+        <style>
+            .home-button {
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 10px 20px;
+                background-color: #000;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            hr {
+                margin-top: 20px;
+                margin-bottom: 20px;
+                border: none;
+                border-top: 1px solid #000;
+            }
+
+            .explanation {
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <table>
+                <tr>
+                    <td><label for="username">이름</label></td>
+                    <td><input id="username" type="text" name="username" /></td>
+                </tr>
+
+                <tr>
+                    <td>성별</td>
+                    <td>
+                        <input id="man" type="radio" name="gender" value="m" />
+                        <label for="man">남자</label>
+                        <input id="woman" type="radio" name="gender" value="w" />
+                        <label for="woman">여자</label>
+                    </td>
+                </tr>
+            </table>
+            <select>
+                <option>서울</option>
+                <option>경기</option>
+                <option>경남</option>
+                <option>경북</option>
+            </select>
+
+            <input type="submit" value="가입" />
+        </form>
+        <hr />
+        <form>
+            색 선택
+            <input type="color" value="#00BFFF" onchange="document.body.style.color=this.value" />
+        </form>
+        <hr />
+        <form>
+            <pre>
+            month : <input type="month" value="2022-03"><br>
+            week : <input type="week" value="2022-W09"><br>
+            data : <input type="date" value="2022-03-01"><br>
+            time : <input type="time" value="21:30"><br>
+            local: <input type="datetime-local"
+            value="2022-03-01T21:30:10.32"><br>
+            </pre>
+        </form>
+        <hr />
+        <form>
+            지속시간 (0.0~10.0시간) :
+            <input type="number" min="0.0" max="10.0" step="0.5" /><br /><br />
+            온도 설정 :10&deg;
+            <input type="range" min="10" max="30" list="temperatures" />30&deg;
+            <datalist id="temperatures">
+                <option value="12" label="Low"></option>
+                <option value="20" label="Medium"></option>
+                <option value="28" label="High"></option>
+            </datalist>
+        </form>
+        <hr />
+
+        <button class="home-button" onclick="window.location.href='main.html'">홈으로 돌아가기</button>
+    </body>
+</html>
