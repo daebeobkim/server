@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>다양한 변환 사례</title>
+        <style>
+            div {
+                display: inline-block;
+                padding: 5px;
+                color: white;
+                background: rgb(43, 117, 202);
+                transition: transform 0.3s ease;
+                margin: 5px;
+            }
+
+            div#rotate {
+                transform: rotate(0deg);
+            }
+            div#rotate:hover {
+                transform: rotate(180deg);
+            }
+
+            div#skew {
+                transform: skew(0deg, -0deg);
+            }
+            div#skew:hover {
+                transform: skew(0deg, -60deg);
+            }
+
+            div#translate {
+                transform: translateY(100px);
+            }
+            div#translate:hover {
+                transform: translate(50px, 100px);
+            }
+
+            div#scale {
+                transform: scale(3, 1);
+            }
+            div#scale:hover {
+                transform: scale(4, 2);
+            }
+            div#scale:active {
+                transform: scale(1, 5);
+            }
+
+            div#scale:active {
+                transform: scale(1.5, 1.5);
+            }
+
+            button {
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 10px 20px;
+                background-color: #000;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>다양한 Transform</h3>
+        <p>
+            아래는 회전(rotate), 기울임(skew), 이동(translate), 확대/축소(scale)가 적용된 사례입니다. 마우스를 올리면
+            추가적 변환이 일어납니다. 그리고 누를 때 크기가 변합니다.
+        </p>
+        <hr />
+        <div id="rotate">rotate 20 deg</div>
+        <div id="skew">skew(0,-20deg)</div>
+        <div id="translate">translateY(100px)</div>
+        <div id="scale">scale(3,1)</div>
+
+        <button onclick="window.location.href='main.html'">홈으로 돌아가기</button>
+    </body>
+</html>
