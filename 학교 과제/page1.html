@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>목록 태그</title>
+        <style>
+            /* 홈 버튼 스타일 */
+            .home-button {
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                padding: 10px 20px;
+                background-color: #000;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            /* 구분선 스타일 */
+            hr {
+                margin-top: 20px;
+                margin-bottom: 20px;
+                border: none;
+                border-top: 1px solid #000;
+            }
+
+            /* 설명 칸 스타일 */
+            .explanation {
+                margin-bottom: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="http://www.hanbit.co.kr">한빛미디어</a><br />
+        <a href="http://www.naver.com/">네이버</a><br />
+        <a href="http://www.daum.net/">다음</a><br />
+
+        <hr />
+
+        <h1>제목 글자 태그 1</h1>
+        <h2>제목 글자 태그 2</h2>
+        <h3>제목 글자 태그 3</h3>
+        <h4>제목 글자 태그 4</h4>
+        <h5>제목 글자 태그 5</h5>
+        <h6>제목 글자 태그 6</h6>
+
+        <hr />
+        <h1><b>Lorem ipsum dolor sit amet</b></h1>
+        <h1><i>Lorem ipsum dolor sit amet</i></h1>
+        <h1><small>Lorem ipsum dolor sit amet</small></h1>
+        <h1>Lorem ipsum dolor<sub>sit amet</sub></h1>
+        <h1>Lorem ipsum dolor<sup>sit amet</sup></h1>
+        <h1><ins>Lorem ipsum dolor sit amet</ins></h1>
+        <h1><del>Lorem ipsum dolor sit amet</del></h1>
+        <hr />
+        <b>Lorem ipsum dolor sit amet</b><br />
+        <i>Lorem ipsum dolor sit amet</i><br />
+        <small>Lorem ipsum dolor sit amet</small><br />
+        Lorem ipsum dolor<sub>sit amet</sub><br />
+        Lorem ipsum dolor<sup>sit amet</sup><br />
+        <ins>Lorem ipsum dolor sit amet</ins><br />
+        <del>Lorem ipsum dolor sit amet</del><br />
+        <hr />
+        <body>
+            <ul>
+                <!-- 첫 번째 목록 -->
+                <li>
+                    <b>과일</b>
+                    <ol>
+                        <li>사과</li>
+                        <li>바나나</li>
+                        <li>오렌지</li>
+                    </ol>
+                </li>
+                <!-- 두 번째 목록 -->
+                <li>
+                    <b>채소</b>
+                    <ol>
+                        <li>상추</li>
+                        <li>치커리</li>
+                        <li>양배추</li>
+                    </ol>
+                </li>
+            </ul>
+        </body>
+        <button class="home-button" onclick="window.location.href='main.html'">홈으로 돌아가기</button>
+    </body>
+</html>
