@@ -1,57 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>복습 홈페이지</title>
+        <title>CSS3 Selector Basic</title>
         <style>
-            .container {
-                margin-top: 50px;
-                margin-left: 50px;
-            }
-            .button-container {
-                display: flex;
-                flex-direction: column;
-            }
-            .button {
-                display: block;
-                padding: 10px 20px;
-                margin: 5px;
-                background-color: #007bff;
-                color: #fff;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                width: 50px;
-            }
-            .button-description {
-                margin-left: 10px;
-                font-size: 14px;
-            }
-            h2 {
-                margin-bottom: 20px;
+            table > tr > th {
+                color: red;
             }
         </style>
     </head>
     <body>
-        <div class="container">
-            <h2>원하는 버튼을 눌러주세요</h2>
-            <div class="button-container">
-                <button class="button" onclick="window.location.href='page1.html'">1</button>
-                <span class="button-description">목록 태그</span>
-
-                <button class="button" onclick="window.location.href='page2.html'">2</button>
-                <span class="button-description">테이블 태그</span>
-
-                <button class="button" onclick="window.location.href='page3.html'">3</button>
-                <span class="button-description">입력 양식 태그</span>
-
-                <button class="button" onclick="window.location.href='page4.html'">4</button>
-                <span class="button-description">시맨틱 태그로 구조화 연습</span>
-
-                <button class="button" onclick="window.location.href='page5.html'">5</button>
-                <span class="button-description">다양한 변환 사례</span>
-            </div>
-        </div>
+        <table border="1">
+            <tr>
+                <th>이름</th>
+                <th>지역</th>
+            </tr>
+            <tr>
+                <td>윤인성</td>
+                <td>서울특별시 강서구 내발산동</td>
+            </tr>
+        </table>
     </body>
 </html>
